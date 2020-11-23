@@ -1,8 +1,7 @@
 .card {
   width: $card_width;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $bordercolor;
   border-radius: 5px;
-  padding: 30px 14px 14px;
   margin-bottom: 50px;
 
   &:hover {
@@ -12,6 +11,18 @@
   &__logo {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 164px;
+    margin: 15px 15px 30px;
+
+    transition: transform 1s;
+    border: 3px solid white;
+    border-radius: 5px;
+
+    &:hover {
+      transform: scale(1.2);
+      border-color: $bordercolor;
+    }
   }
 
   &__img {
@@ -19,7 +30,7 @@
   }
 
   &__title {
-    padding: 45px 0 6px;
+    padding: 0 15px 6px;
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
@@ -27,12 +38,13 @@
 
   &__code {
     @include fontSize();
+    padding: 0 15px;
   }
 
   &__feedback {
     @include flexBetween();
     align-items: center;
-    padding-top: 15px;
+    padding: 15px 15px 0;
   }
 
   &__reviews {
@@ -42,7 +54,7 @@
   &__price {
     @include flexBetween();
     align-items: flex-end;
-    padding-top: 20px;
+    padding: 20px 15px 0;
   }
 
   &__text {
@@ -56,7 +68,7 @@
   }
 
   &__buy {
-    padding-top: 20px;
+    padding: 20px 15px 15px;
   }
 
   &__link {
@@ -71,6 +83,8 @@
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
+    transition-duration: 0.5s;
+
   }
 
   &__link:hover {
