@@ -18,12 +18,13 @@
 .nav {
   &__list {
     list-style: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    column-gap: 20px;
   }
 
   &__item {
     white-space: nowrap;
-    margin-left: 20px;
   }
 
   &__item:first-child {
